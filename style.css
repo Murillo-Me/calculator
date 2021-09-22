@@ -127,11 +127,13 @@ button#decimal {
     }
 
     .calculator-display {
-        font-size: 2.5rem;
+        border-radius: 0px;
+        font-size: 2.8rem;
         width: 100vw;
     }
 
     .calculator-keyboard {
+        border-radius: 0px;
         width: 100vw;
     }
 }
