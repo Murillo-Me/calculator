@@ -1,0 +1,114 @@
+/* CSS RESET */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+/* CALCULATOR CSS */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-body {
+    margin: 50px;
+    width: 500px;
+    height: 670px;
+    background-color: #C4C4C4;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.calculator-display {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    width: 90%;
+    height: 100px;
+    background-color: #C3D68D;
+    border-radius: 20px;
+    margin-inline: auto;
+    margin-top: 30px
+}
+
+span#display {
+    text-align: right;
+    margin: 20px;
+}
+
+.calculator-keyboard {
+    width: 90%;
+    height: 490px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+    background-color: #DDDDDD;
+    border-radius: 15px;
+}
+
+.calculator-keyboard > button {
+    width: 20%;
+    height: 16%;
+    margin-inline: 8px;
+    margin-top: 0px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+}
+
+.calculator-keyboard > button:hover {
+    filter: brightness(80%);
+}
+
+button.calc-function {
+    background-color: #C4C4C4;
+}
+
+button.operator {
+    background-color: #86A9EE;
+}
+
+button.digit {
+    background-color: #fad3d3;
+}
+
+button#equals {
+    background-color: #73D3B6;
+    width: 45%;
+}
+
+button#decimal {
+    background-color: #f7bcbc;
+}
