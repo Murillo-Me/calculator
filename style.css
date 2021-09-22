@@ -125,4 +125,8 @@ button#decimal {
     .calculator-body > * {
         margin-block: 15px;
     }
+
+    .calculator-display {
+        font-size: 2.5rem;
+    }
 }
