@@ -33,6 +33,10 @@ function invertSign() {
     display.textContent = -1 * parseFloat(display.textContent)
 }
 
+function numberToPercentage() {
+    display.textContent = parseFloat(display.textContent) / 100
+}
+
 let operationOnMemory = null
 let receiveSecondDigit = false
 let enterFirstNumber = true
@@ -92,6 +96,9 @@ digits.forEach(digitBtn => digitBtn.addEventListener('click', e => {
 
 const signBtn = document.querySelector('button#sign')
 signBtn.addEventListener('click', invertSign)
+
+const percentageBtn = document.querySelector('button#percentage')
+percentageBtn.addEventListener('click', numberToPercentage)
 
 const operators = document.querySelectorAll('.operator')
 operators.forEach(operator => operator.addEventListener('click', saveOperator))
