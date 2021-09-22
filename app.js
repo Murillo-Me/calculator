@@ -37,6 +37,26 @@ function numberToPercentage() {
     display.textContent = parseFloat(display.textContent) / 100
 }
 
+function keyboardInput(event) {
+    if (isNumericInput(event.keyCode)) {
+        if (display.textContent.length > 8) return
+
+        if (!receiveSecondDigit) {
+            if (display.textContent == 0) display.textContent = event.key
+            else display.textContent += event.key
+        } else {
+            receiveSecondDigit = false
+            display.textContent = event.key
+        }
+    } else {
+        return
+    }
+}
+
+function isNumericInput(keyCode) {
+    return ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 96 && keyCode <= 105))
+}
+
 let operationOnMemory = null
 let receiveSecondDigit = false
 let enterFirstNumber = true
@@ -105,3 +125,5 @@ operators.forEach(operator => operator.addEventListener('click', saveOperator))
 
 const equals = document.querySelector('button#equals')
 equals.addEventListener('click', computeOperation)
+
+document.addEventListener('keydown', keyboardInput)
